@@ -1,0 +1,18 @@
+version: '3'
+services:
+  express-app:
+    build:
+      context: ./index.js  # Path to your Express.js application code
+    container_name: my-express-app
+    ports:
+      - "4000:4000"  # Map port 3000 from the host to port 3000 in the container
+    depends_on:
+      - mongodb  # This service depends on the MongoDB service
+
+  mongodb:
+    image: mongo
+    container_name: my-mongodb
+    ports:
+      - "27017:27017"  # Map port 27017 from the host to port 27017 in the container
+    volumes:
+      - ./data:/data/db  # Mount a host directory to store MongoDB data

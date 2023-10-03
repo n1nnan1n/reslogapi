@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Signin Template · Bootstrap v5.0</title>
+    <title></title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
@@ -59,7 +59,26 @@
             </p>
         <% } %>
     <% } %>
-
+    <div class="form-floating">
+      <input type="text" name="fname" value="<%= fname %>" class="form-control" id="floatingInput" placeholder="firstname">
+      <label for="floatingInput">Firstname</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" name="lname" value="<%= lname %>" class="form-control" id="floatingInput" placeholder="lastname">
+      <label for="floatingInput">Lastname</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" name="nname" value="<%= nname %>" class="form-control" id="floatingInput" placeholder="nickname">
+      <label for="floatingInput">Nickname</label>
+    </div>
+    <div class="form-floating">
+      <input type="date" name="birthdate" value="<%= nname %>" class="form-control" id="floatingInput" placeholder="birthdate">
+      <label for="floatingInput">Birthdate</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" name="address" value="<%= address %>" class="form-control" id="floatingInput" placeholder="address">
+      <label for="floatingInput">Address</label>
+    </div>
     <div class="form-floating">
       <input type="email" name="email" value="<%= email %>" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
@@ -69,14 +88,9 @@
       <label for="floatingPassword">Password</label>
     </div>
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
   </form>
+  <a href="/login">Already have an account?</a>
 </main>
 
 
